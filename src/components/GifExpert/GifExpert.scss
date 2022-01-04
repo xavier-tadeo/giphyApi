@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+.gif {
+  display: flex;
+  justify-content: center;
+  background-color: #e4fde1;
+  padding: 20px;
+
+  &__title {
+    color: #f45b69;
+    font-family: "Indie Flower", Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: 0;
+    border-bottom: black 2px solid;
+    width: 40%;
+    text-align: center;
+  }
+
+  &__line {
+    display: none;
+  }
+}

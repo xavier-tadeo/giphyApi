@@ -1,4 +1,3 @@
-import "./App.css";
 import { GifExpert } from "./components/GifExpert/GifExpert";
 
 function App() {
