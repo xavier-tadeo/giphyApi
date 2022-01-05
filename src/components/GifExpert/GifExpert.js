@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AddCategory } from "../AddCategory/AddCategory";
 
 export const GifExpert = () => {
   const arrayCategories = ["Doraimon", "Arare", "DragonBall"];
@@ -11,7 +12,7 @@ export const GifExpert = () => {
   };
   return (
     <div className="list">
-      <button onClick={handleAdd}>Added</button>
+      <AddCategory />
       <ol>
         {categories.map((categorie) => {
           return <li key={categorie}>{categorie}</li>;
