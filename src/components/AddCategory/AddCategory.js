@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AddCategory.scss";
 
-export const AddCategory = () => {
+export const AddCategory = ({ setCategories }) => {
   const [inputValue, setInputValue] = useState("mas");
 
   const handleInputChange = (evt) => {
@@ -10,7 +10,7 @@ export const AddCategory = () => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    setInputValue("");
+    setCategories((categories) => [...categories, inputValue]);
   };
   return (
     <div className="addcategory">

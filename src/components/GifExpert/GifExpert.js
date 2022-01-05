@@ -6,13 +6,13 @@ export const GifExpert = () => {
 
   const [categories, setCategories] = useState(arrayCategories);
 
-  const handleAdd = () => {
-    // setCategories([...categories, "Barret de palla"]);
-    setCategories((categories) => [...categories, "Barret"]);
-  };
+  // const handleAdd = () => {
+  //    setCategories([...categories, "Barret de palla"]);
+  // setCategories((categories) => [...categories, "Barret"]);
+  // };
   return (
     <div className="list">
-      <AddCategory />
+      <AddCategory setCategories={setCategories} />
       <ol>
         {categories.map((categorie) => {
           return <li key={categorie}>{categorie}</li>;
