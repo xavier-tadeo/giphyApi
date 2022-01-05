@@ -15,14 +15,26 @@ export const AddCategory = ({ setCategories }) => {
   return (
     <div className="addcategory">
       <h3 className="addcategory__title">Added category</h3>
-      <form className="addcategory__form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="addcategory__input"
-          value={inputValue}
-          onChange={handleInputChange}
+      <div className="addcategory__container-form">
+        <img
+          src="https://media.giphy.com/media/xTiTnwi8Azjnva46Fq/giphy.gif"
+          alt="buu go out"
+          className="addcategory__img"
         />
-      </form>
+        <form className="addcategory__form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="addcategory__input"
+            value={inputValue}
+            onChange={handleInputChange}
+          />
+        </form>
+        <img
+          src="https://media.giphy.com/media/ZNrjpRCSKbQPe/giphy.gif"
+          alt="buu talking"
+          className="addcategory__img"
+        />
+      </div>
     </div>
   );
 };
