@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import "./AddCategory.scss";
 
 export const AddCategory = ({ setCategories }) => {
-  const [inputValue, setInputValue] = useState("mas");
+  const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (evt) => {
     setInputValue(evt.target.value);
@@ -10,7 +11,10 @@ export const AddCategory = ({ setCategories }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    setCategories((categories) => [...categories, inputValue]);
+    if (inputValue.trim().length > 2) {
+      setCategories((categories) => [...categories, inputValue]);
+      setInputValue("");
+    }
   };
   return (
     <div className="addcategory">
@@ -37,4 +41,8 @@ export const AddCategory = ({ setCategories }) => {
       </div>
     </div>
   );
+};
+
+AddCategory.propType = {
+  setCategories: PropTypes.func.isRequired,
 };
