@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export const GifGrid = ({ categorie }) => {
-  const [count, setCount] = useState(0);
+  const [images, setImages] = useState([]);
 
   const getGif = async () => {
     const url =
@@ -17,6 +17,7 @@ export const GifGrid = ({ categorie }) => {
       };
     });
     console.log(gifs);
+    setImages(gifs);
   };
 
   useEffect(() => {
@@ -26,8 +27,14 @@ export const GifGrid = ({ categorie }) => {
   return (
     <>
       <li>{categorie}</li>
-      <h3>{count}</h3>
-      <button onClick={() => setCount(count + 1)}>added</button>
+      {images.map(({ id, img, title }) => {
+        return (
+          <>
+            <ol key={id}>{title}</ol>
+            <img src={img} alt="se" />
+          </>
+        );
+      })}
     </>
   );
 };
