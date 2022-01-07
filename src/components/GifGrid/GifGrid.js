@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { GitGridItem } from "../GitGridItem/GitGridItem";
 
 export const GifGrid = ({ categorie }) => {
+  const [images, setImages] = useState([]);
+
   const getGif = async () => {
     const url =
       "https://api.giphy.com/v1/gifs/search?q=dragon+ball&limit=10&api_key=z3bZoUQrp7F5qjY3Xr5MUVKBEJZsikUw";
@@ -15,8 +18,19 @@ export const GifGrid = ({ categorie }) => {
       };
     });
     console.log(gifs);
+    setImages(gifs);
   };
 
-  getGif();
-  return <li>{categorie}</li>;
+  useEffect(() => {
+    getGif();
+  }, []);
+
+  return (
+    <>
+      <li>{categorie}</li>
+      {images.map((image) => (
+        <GitGridItem key={image.id} {...image} />
+      ))}
+    </>
+  );
 };
