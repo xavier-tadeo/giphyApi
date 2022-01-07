@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { GitGridItem } from "../GitGridItem/GitGridItem";
 
 export const GifGrid = ({ categorie }) => {
   const [images, setImages] = useState([]);
@@ -27,14 +28,9 @@ export const GifGrid = ({ categorie }) => {
   return (
     <>
       <li>{categorie}</li>
-      {images.map(({ id, img, title }) => {
-        return (
-          <>
-            <ol key={id}>{title}</ol>
-            <img src={img} alt="se" />
-          </>
-        );
-      })}
+      {images.map((image) => (
+        <GitGridItem key={image.id} {...image} />
+      ))}
     </>
   );
 };
