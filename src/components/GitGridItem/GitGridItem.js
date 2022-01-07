@@ -1,11 +1,11 @@
 import React from "react";
+import "./GitGridItem.scss";
 
 export const GitGridItem = ({ id, img, title }) => {
-  console.log(id, title, img);
   return (
-    <div>
-      <p>{title}</p>
-      <img src={img} alt={title} />
+    <div className="card">
+      <p className="card__title">{title}</p>
+      <img className="card__image" src={img} alt={title} />
     </div>
   );
 };

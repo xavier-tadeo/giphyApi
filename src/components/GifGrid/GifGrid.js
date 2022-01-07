@@ -2,6 +2,7 @@ import React from "react";
 
 import { useFetchGif } from "../../hooks/useFetchGif";
 import { GitGridItem } from "../GitGridItem/GitGridItem";
+import "./GifGrid.scss";
 
 export const GifGrid = ({ categorie }) => {
   const { data, loading } = useFetchGif(categorie);
@@ -9,10 +10,12 @@ export const GifGrid = ({ categorie }) => {
   return (
     <>
       <li>{categorie}</li>
-      {loading && <p>"Loading..."</p>}
-      {data.map((image) => (
-        <GitGridItem key={image.id} {...image} />
-      ))}
+      <div className="container__card">
+        {loading && <p>"Loading..."</p>}
+        {data.map((image) => (
+          <GitGridItem key={image.id} {...image} />
+        ))}
+      </div>
     </>
   );
 };
