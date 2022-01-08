@@ -9,9 +9,11 @@ export const GifGrid = ({ categorie }) => {
 
   return (
     <>
-      <li>{categorie}</li>
+      <li className="animate__animated animate__bounce">{categorie}</li>
       <div className="container__card">
-        {loading && <p>"Loading..."</p>}
+        {loading && (
+          <p className="animate__animated animate__flash">"Loading..."</p>
+        )}
         {data.map((image) => (
           <GitGridItem key={image.id} {...image} />
         ))}

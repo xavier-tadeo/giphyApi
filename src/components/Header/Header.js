@@ -20,7 +20,7 @@ export const Header = () => {
           <h2 className="gif__title">Gif Expert</h2>
           <hr className="gif__line" />
         </div>
-        <h3 className="gif__author">by Xavier Tadeoo</h3>
+        <h3 className="gif__author ">by Xavier Tadeoo</h3>
       </div>
     </>
   );

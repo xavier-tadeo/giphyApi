@@ -18,7 +18,9 @@ export const AddCategory = ({ setCategories }) => {
   };
   return (
     <div className="addcategory">
-      <h3 className="addcategory__title">Added category</h3>
+      <h3 className="addcategory__title animate__animated animate__bounce">
+        Added category
+      </h3>
       <div className="addcategory__container-form">
         <img
           src="https://media.giphy.com/media/xTiTnwi8Azjnva46Fq/giphy.gif"
@@ -36,7 +38,7 @@ export const AddCategory = ({ setCategories }) => {
         <img
           src="https://media.giphy.com/media/ZNrjpRCSKbQPe/giphy.gif"
           alt="buu talking"
-          className="addcategory__img"
+          className="addcategory__img animate__animated animate__hinge"
         />
       </div>
     </div>
