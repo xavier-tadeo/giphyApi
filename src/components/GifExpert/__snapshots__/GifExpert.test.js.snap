@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given GifExpert component It should the number of category 1`] = `
+<div
+  className="list"
+>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <ol
+    className="list__container"
+  >
+    <GifGrid
+      categorie="One Punch"
+      key="One Punch"
+    />
+    <GifGrid
+      categorie="Dragon Ball"
+      key="Dragon Ball"
+    />
+  </ol>
+</div>
+`;
+
+exports[`Given GifExpert component When it render It should rendered a divTag and olTag 1`] = `
+<div
+  className="list"
+>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <ol
+    className="list__container"
+  />
+</div>
+`;

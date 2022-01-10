@@ -3,10 +3,8 @@ import { AddCategory } from "../AddCategory/AddCategory";
 import { GifGrid } from "../GifGrid/GifGrid";
 import "./GifExpert.scss";
 
-export const GifExpert = () => {
-  const arrayCategories = ["Dragon ball"];
-
-  const [categories, setCategories] = useState(arrayCategories);
+export const GifExpert = ({ defaultCategory = [] }) => {
+  const [categories, setCategories] = useState(defaultCategory);
 
   // const handleAdd = () => {
   //    setCategories([...categories, "Barret de palla"]);
