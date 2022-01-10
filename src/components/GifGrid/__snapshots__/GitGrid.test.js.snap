@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a GitGrid component When it call the function 'useFetchGif' It should show images 1`] = `
+<Fragment>
+  <li
+    className="animate__animated animate__bounce"
+  >
+    Ball dragon
+  </li>
+  <div
+    className="container__card"
+  >
+    <GitGridItem
+      id="ABC"
+      key="ABC"
+      title="Algo"
+      url="url"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Given a GitGrid component When it render It should rendered a liTag with name 'categorie' and one divTag 1`] = `
+<Fragment>
+  <li
+    className="animate__animated animate__bounce"
+  >
+    Ball dragon
+  </li>
+  <div
+    className="container__card"
+  >
+    <p
+      className="animate__animated animate__flash"
+    >
+      "Loading..."
+    </p>
+  </div>
+</Fragment>
+`;
