@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a AddCategoy component When it is render It should rendered a h3Tag with name 'Added category' and inputTag 1`] = `
+<div
+  className="addcategory"
+>
+  <h3
+    className="addcategory__title animate__animated animate__bounce"
+  >
+    Added category
+  </h3>
+  <div
+    className="addcategory__container-form"
+  >
+    <img
+      alt="buu go out"
+      className="addcategory__img"
+      src="https://media.giphy.com/media/xTiTnwi8Azjnva46Fq/giphy.gif"
+    />
+    <form
+      className="addcategory__form"
+      onSubmit={[Function]}
+    >
+      <input
+        className="addcategory__input"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </form>
+    <img
+      alt="buu talking"
+      className="addcategory__img animate__animated animate__hinge"
+      src="https://media.giphy.com/media/ZNrjpRCSKbQPe/giphy.gif"
+    />
+  </div>
+</div>
+`;
