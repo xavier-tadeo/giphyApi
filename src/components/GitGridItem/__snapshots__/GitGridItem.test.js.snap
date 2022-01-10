@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a GitGridItem component When it render Then should rendered a pTag and imgTag 1`] = `
+<div
+  className="card animate__animated animate__zoomInDown"
+>
+  <p
+    className="card__title"
+  >
+    Un titulo
+  </p>
+  <img
+    alt="Un titulo"
+    className="card__image"
+    src="url"
+  />
+</div>
+`;
